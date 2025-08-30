@@ -1,0 +1,2 @@
+export const baseURL ="http://localhost:3000";
+export const dummy = "https://www.citypng.com/public/uploads/preview/png-round-blue-contact-user-profile-icon-701751694975293fcgzulxp2k.png"
