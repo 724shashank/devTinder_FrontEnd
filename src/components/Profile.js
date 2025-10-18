@@ -99,7 +99,7 @@ const Profile = () => {
   return (
     <>
       {userProfile && (
-        <div className="min-h-screen bg-base-200 flex items-center justify-center p-6 -mt-15">
+        <div className="min-h-screen flex items-center justify-center p-6 -mt-15">
           <div className="flex gap-6 w-full max-w-5xl">
             {/* Profile Form */}
             <div className="card flex-1 shadow-2xl bg-base-100">

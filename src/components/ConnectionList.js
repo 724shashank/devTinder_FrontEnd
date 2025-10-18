@@ -2,9 +2,10 @@ import axios from "axios";
 import { baseURL } from "../utils/constants";
 import { removeRequest } from "../redux/slices/pendingRequestSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router";
 
 const ConnectionList = ({ details, showSkills, showButtons, reqID }) => {
-  const { firstName, lastName, age, gender, photoUrl, skills, about } = details;
+  const { firstName, lastName, age, gender, photoUrl, skills, about,_id } = details;
   const dispatch = useDispatch();
 
   const handleAction = async (e, reqID) => {
@@ -50,7 +51,7 @@ const ConnectionList = ({ details, showSkills, showButtons, reqID }) => {
           </div>
           {showButtons ? (
             <div className="flex flex-col gap-2">
-              <button className="btn btn-sm btn-primary">Message</button>
+            <Link to={`/chat/${_id}`}><button className="btn btn-sm btn-primary">Message</button></Link>
               <button className="btn btn-sm btn-secondary">Remove</button>
             </div>
           ) : (

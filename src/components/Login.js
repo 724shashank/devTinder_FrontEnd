@@ -77,7 +77,7 @@ const Login = () => {
   }, [user?.firstName, navigate]);
 
   return (
-    <div className="min-h-screen bg-base-200 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       <div className="card w-full max-w-md shadow-2xl bg-base-100 mt-10 mb-30">
         <form onSubmit={handleSubmit} className="card-body space-y-3">
           <h2 className="text-center text-2xl font-semibold">

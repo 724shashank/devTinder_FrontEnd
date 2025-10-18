@@ -7,6 +7,7 @@ import { removeFeed } from "../redux/slices/feedSlice";
 import { removeConnection } from "../redux/slices/connnectionSlice";
 import { baseURL } from "../utils/constants";
 import {dummy} from "../utils/constants"
+import { IoSend } from "react-icons/io5";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const Navbar = () => {
       <div className="navbar bg-base-300 shadow-sm">
         <div className="flex-1">
           <Link to={"/"} className="btn btn-ghost text-xl">
-            DevTinder
+          DevTinder
           </Link>
         </div>
         {user && (
@@ -65,7 +66,6 @@ const Navbar = () => {
                 <li>
                   <Link to={"/profile"} className="justify-between">
                     Profile
-                    <span className="badge">New</span>
                   </Link>
                 </li>
                 <li>
@@ -76,6 +76,11 @@ const Navbar = () => {
                 <li>
                   <Link to={"/requests"} className="justify-between">
                     Requests
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/subscribe"} className="justify-between">
+                    Subscribe
                   </Link>
                 </li>
                 <li>

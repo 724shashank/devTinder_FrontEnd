@@ -2,3 +2,33 @@
 @plugin "daisyui" {
    themes: light --default,dark --prefersdark,cyberpunk,halloween,abyss;
  }
+
+ .bg-box {
+  width: auto;        /* set width */
+  height: auto;       /* set height */
+  background-image: url("https://i.pinimg.com/736x/6a/8c/a1/6a8ca1b1ff07237bcbd0477d951711b7.jpg");
+  background-size:cover;       /* cover = fill div proportionally */
+  background-repeat: no-repeat; /* don’t repeat the image */
+  background-position: center;  /* center the image */
+}
+
+/* index.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.background {
+  min-height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* lighter overlay */
+    url('./assets/bg.jpg'); /* your wallpaper */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 0.3s ease-in-out;
+}
+
+
+
+
