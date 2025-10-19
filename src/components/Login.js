@@ -37,7 +37,7 @@ const Login = () => {
       const res = await axios.post(baseURL + "/login", login, {
         withCredentials: true,
       });
-      dispatch(addDetails(res.data.user));
+      dispatch(addDetails(res.data.userObject));
       navigate("/");
     } catch (error) {
       setError(error?.response?.data?.message);
@@ -61,7 +61,6 @@ const Login = () => {
       dispatch(addDetails(res.data.data));
       navigate("/profile");
     } catch (error) {
-      console.error(error);
       alert(error.response?.data?.message || "Something went wrong!");
     }
   };
@@ -72,7 +71,7 @@ const Login = () => {
 
   useEffect(() => {
     if (user?.firstName) {
-      navigate("/profile");
+      navigate("/");
     }
   }, [user?.firstName, navigate]);
 

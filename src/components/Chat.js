@@ -63,13 +63,11 @@ const Chat = () => {
     });
 
     socket.on("usersInRoom", (currentlyOnline) => {
-      console.log(currentlyOnline);
       dispatch(addOnLineUser(currentlyOnline));
     });
 
     socket.on("userOffline", ({ userId }) => {
       setOnline(false);
-      console.log("offline", userId);
       dispatch(removeOnlineUser(userId));
     });
 

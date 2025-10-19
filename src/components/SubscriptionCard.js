@@ -2,7 +2,6 @@ import axios from "axios";
 import { baseURL } from "../utils/constants";
 
 const SubscribeCard = ({details}) => {
-  console.log(details)
   const handlePayment = async (type) => {
     const order = await axios.post(
       baseURL+`/createOrder/${type}`,{},
